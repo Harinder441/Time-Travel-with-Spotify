@@ -4,11 +4,12 @@ from spotipy.oauth2 import SpotifyOAuth
 
 class MySpotify:
     def __init__(self):
+        #you have to get tyour own token.txt file
         self.spotify = spotipy.Spotify(
             auth_manager=SpotifyOAuth(scope="playlist-modify-private",
                                       cache_path="token.txt",
-                                      client_id= "506b33c259ad427cb36f494e82c1cbc3",
-                                      client_secret= "3ea56a8442974557a3cbc5c15b1675e1",
+                                      client_id= YOUR_CLIENT_ID,
+                                      client_secret= YOUR_CLIENT_SECRET,
                                       redirect_uri="http://example.com"))
 
     def get_spotify_uri(self, song_name):
